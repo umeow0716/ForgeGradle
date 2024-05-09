@@ -380,7 +380,7 @@ uploadArchives {
 
         dependsOn 'build'
 
-        if (System.env.MAVEN_USER)
+        if (System.env.GITHUB_ACTOR)
         {
             repository(url: "https://maven.pkg.github.com/umeow0716/ForgeGradle") {
                 authentication(userName: System.getenv("GITHUB_ACTOR"), password: System.getenv("GITHUB_TOKEN"))
