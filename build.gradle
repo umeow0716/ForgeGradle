@@ -27,7 +27,7 @@ project.ext {
 
 group = 'net.minecraftforge.gradle'
 version = "${project.ext.GIT_INFO.tag}.${project.ext.GIT_INFO.offset}"
-archivesBaseName = 'ForgeGradle'
+archivesBaseName = 'forgegradle'
 targetCompatibility = '1.8'
 sourceCompatibility = '1.8'
 
@@ -383,8 +383,8 @@ uploadArchives {
 
         if (System.env.MAVEN_USER)
         {
-            repository(url: "https://maven.minecraftforge.net/") {
-                authentication(userName: System.env.MAVEN_USER, password: System.env.MAVEN_PASSWORD)
+            repository(url: "https://maven.pkg.github.com/umeow0716/ForgeGradle") {
+                authentication(userName: System.getenv("GITHUB_ACTOR"), password: System.getenv("GITHUB_TOKEN"))
             }
         }
         else
