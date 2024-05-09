@@ -292,6 +292,7 @@ public class JenkinsChangelog extends DefaultTask
 
     public String getServerRoot()
     {
+        System.out.println(Constants.resolveString(serverRoot));
         return Constants.resolveString(serverRoot);
     }
 
