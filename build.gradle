@@ -26,7 +26,7 @@ project.ext {
 }
 
 group = 'net.minecraftforge.gradle'
-version = "FG_2.3"
+version = "2.3.4"
 archivesBaseName = 'forgegradle'
 targetCompatibility = '1.8'
 sourceCompatibility = '1.8'
@@ -294,7 +294,6 @@ jar {
         attributes 'version':project.version
         attributes 'javaCompliance': project.targetCompatibility
         attributes 'group':project.group
-        attributes 'Implementation-Version': project.version + "-" + GIT_INFO.hash
     }
 }
 
